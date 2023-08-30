@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Jobs from "./Jobs.tsx";
-import JobsApplications from "./JobsApplications.tsx";
-import ContactUs from "./ContactUs.tsx";
-import Users from "./Users.tsx";
+import Jobs from "./pages/Jobs.tsx";
+import JobsApplications from "./pages/JobsApplications.tsx";
+import ContactUs from "./pages/ContactUs.tsx";
+import Users from "./pages/Users.tsx";
 
 function App() {
 
@@ -10,9 +10,9 @@ function App() {
     <BrowserRouter>
        <Routes>
          <Route path="/" element={<Jobs />} />
-         <Route path="jobapplications" element={<JobsApplications />} />
-         <Route path="contactus" element={<ContactUs />} />
+         <Route path="jobsapplications" element={<JobsApplications />} />
          <Route path="users" element={<Users />} />
+         <Route path="contactus" element={<ContactUs />} />
        </Routes>
     </BrowserRouter>
   )

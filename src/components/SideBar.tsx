@@ -11,7 +11,10 @@ import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import { AccountCircle, Flight, Group } from '@mui/icons-material'
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -29,7 +32,6 @@ interface Props {
 export default function SideBar (props: Props) {
     const { window } = props
     const [mobileOpen, setMobileOpen] = React.useState(false)
-
     const navigate = useNavigate();
 
 
@@ -37,11 +39,12 @@ export default function SideBar (props: Props) {
         setMobileOpen(!mobileOpen)
     }
     const texts = [
-        { title: 'Flights', value: 'flights' },
-        { title: 'Employees', value: 'employees' },
-        { title: 'Users', value: 'users' }
+        { title: 'Jobs', value: '' },
+        { title: 'Jobs Applications', value: 'jobsapplications' },
+        { title: 'Users', value: 'users' },
+        { title: 'Contact Us', value: 'contactus' },
     ]
-    const icons = [<AccountCircle key="account"/>, <Group key="group"/>, <Flight key="flight"/>]
+    const icons = [<AccountBalanceIcon key="jobs"/>,<AddBusinessIcon key="jobsapplications"/>,<AccountCircleIcon key="users"/> ,<ContactMailIcon key="contactus"/>]
     const drawer = (
         <Box>
             <Toolbar/>
